@@ -97,6 +97,17 @@ You should see something similar to:
 
 `cd /path/to/folder`
 
-2. Once you have done use the `git clone` command:
-`git clone `
+2. Now use the `git clone` command:
+
+`git clone https://github.com/Angela0wu0/CS312-Project2.git`
+
+3. Access the cloned repository with:
+
+`cd CS312-Project2`
+
+### Step 2: AWS Credentials  
+We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://www.awsacademy.com/vforcesite/LMS_Login)
+1. Log in to your AWS Academy and access the AWS Academy Learner Lab
+2. Click `Start Lab'
+3. Once the red dot turns green, click 'AWS Details' 
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
