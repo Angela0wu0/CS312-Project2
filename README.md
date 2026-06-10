@@ -15,8 +15,6 @@ After cloning  accessing the folder  running the 'install.sh' bash script, it wi
 
 
 ### Installing the Requirements
-Open the Command Line Interface Command Prompt for Windows and Terminal for Linux users.
-
 ## Installing WSL
 `wsl --install`
 `wsl --version`
