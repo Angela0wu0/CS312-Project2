@@ -80,7 +80,7 @@ wsl --install
 ```bash
 wsl --version
 ```
-- Configure WSL enable Linux-style file permissions:
+- Configure WSL to enable Linux-style file permissions:
 ```
 sudo vim /etc/wsl.conf
 ```
@@ -166,13 +166,13 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
 1. Start the AWS Learner Lab 
    - Log in to your AWS Academy and access the AWS Academy Learner Lab.
    - Click 'Start Lab'.
-   - Once the `red` dot turns `green`, click 'AWS Details'.
+   - Once the `red` dot turns `green`, click `AWS Details`.
    - Next to 'AWS CLI:' click `SHOW` (Stay on this page, we will need this for the next step)
      
 
 
 2. Copy the AWS CLI Credentials Into Our Local Machine
-   >NOTE: You will copy all the content in `SHOW` into '~/.aws/credentials'.
+   >NOTE: You will copy all the content in `SHOW` into `~/.aws/credentials`.
 
    - Use the following command:
    ```bash
@@ -182,7 +182,7 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
    Make the `.aws` folder to store the AWS Credentials, this is the default credentials path `AWS CLI` will look for.
    
    - Press `i` on the keyboard, and the bottom left of the terminal now says `INSERT`.
-   - Copy the AWS CLI credentials that we found next to 'AWS CLI:'.
+   - Copy the AWS CLI credentials that we found next to `AWS CLI:`.
    - When copied over, the format should look something like:
         ```bash
         [default]
