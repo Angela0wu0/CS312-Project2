@@ -80,6 +80,20 @@ wsl --install
 ```bash
 wsl --version
 ```
+- Configure WSL enable Linux-style file permissions:
+```
+sudo vim /etc/wsl.conf
+```
+  - Press `i` on the keyboard, and the bottom left of the terminal now says `INSERT`.
+  - Copy in:
+   ```bash
+   [automount]
+   options = "metadata"
+   ```
+   - Then hit `Esc` and type `:` using `shift + ;`.
+   - Then type `wq` and hit `Enter`.
+Without this, the `chmod` command will not make the correct file permission settings. This is a problem as we need use the `.pem` private key with proper `400` or `600` file permissions to `ssh`.
+
 ---
 ### [Installing AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - For those using WSL, run the following command first:
