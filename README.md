@@ -1,10 +1,11 @@
 # CS312-Project2
 ## Background
 ### Purpose
-The purpose of this project is to automate the creation of a Minecraft Java Edition Server (provisioning, configuration, and setup) on an AWS EC2 Instance.
+The purpose of this project is to automate the creation of a Minecraft Java Edition Server (provisioning, configuration, and setup) on an AWS EC2 Instance **without** ever accessing the AWS Management Console. Though, except for accessing the AWS Learner Lab to start the Lab and to retrieve the AWS Academy CLI Credentials.
 
 ### How It Works
-The deployment is an automated infrastructure pipeline that will: use Terraform to provision the AWS resources, and a BASH script to SSH into the created EC2 Instance to set up and install the Minecraft server 
+The deployment of the Minecraft Java Edition Server is an automated infrastructure pipeline that will: use Terraform to provision the AWS resources, and a BASH script to SSH into the created EC2 Instance and set up and install the Minecraft server. Upon successful completion, the server is verified using Nmap:
+`nmap -sV -Pn -p T:25565 <instance_public_ip>`
 
 ## Repository Structure
 ```
@@ -42,6 +43,7 @@ graph LR
 ```
 
 ## Requirements
+- Git
 - Ubuntu Environment or WSL
 - AWS CLI
 - Terraform
@@ -50,8 +52,11 @@ graph LR
 ## Installing the Requirements
 Open your command line interface. On Windows is called Command Prompt, and Terminal for Linux users.
 
+### Installing Git
+
+
 ### Installing WSL (OPTIONAL For Ubuntu Users)
-Then run the following command:
+Run the following command:
 
 `wsl --install`
 
@@ -85,9 +90,9 @@ You should see something similar to:
 ### Installing Nmap
 
 
+## Connecting to the Minecraft Server
+### Step 1: Cloning This Repository
 
-Connecting to the Minecraft Server
-Step 1:
 
 
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
