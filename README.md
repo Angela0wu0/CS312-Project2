@@ -8,7 +8,7 @@ The deployment is an automated infrastructure pipeline that will: use Terraform 
 
 ## Repository Structure
 ```
-|   .gitignore
+CS312-Project2/
 |   install.sh
 |   README.md
 |   |
