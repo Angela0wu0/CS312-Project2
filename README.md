@@ -59,16 +59,22 @@ Open your command line interface. On Windows is called Command Prompt, and Termi
 ### Installing WSL (OPTIONAL For Ubuntu Users)
 Run the following command:
 
-```wsl --install```
+```
+wsl --install
+```
 
 Verify the installation by running the following command:
 
-```wsl --version```
+```
+wsl --version
+```
 
 ### Installing AWS CLI
 For those using WSL, run the following command first:
 
-```wsl```
+```
+wsl
+```
 
 Then run the following command:
 
@@ -80,7 +86,9 @@ sudo ./aws/install
 
 Verify if AWS CLI is installed properly by running the following command:
 
-```aws --version```
+```
+aws --version
+```
 
 You should see something similar to:
 
@@ -91,7 +99,7 @@ You should see something similar to:
 ### Installing Nmap
 
 
-## Connecting to the Minecraft Server
+## How to Run This Automation
 ### Step 1: Cloning This Repository
 1. In your Command Line Interface, move to your desired folder location to clone this Repository. Use the `cd` command followed by the path to your folder location:
 
@@ -105,11 +113,38 @@ You should see something similar to:
 
 ```cd CS312-Project2```
 
-### Step 2: AWS Credentials  
+### Step 2: Setting Up The AWS Credentials
 We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://www.awsacademy.com/vforcesite/LMS_Login)
-1. Log in to your AWS Academy and access the AWS Academy Learner Lab
-2. Click 'Start Lab'
-3. Once the `red` dot turns `green`, click 'AWS Details':
-   Next to 'AWS CLI:' click 'SHOW' 
-5. You will copy all the content in `SHOW` into your local machine by
+1. Start the AWS Learner Lab 
+   - Log in to your AWS Academy and access the AWS Academy Learner Lab.
+   - Click 'Start Lab'.
+   - Once the `red` dot turns `green`, click 'AWS Details':
+   Next to `AWS CLI:` click `SHOW` (Stay on this page, we will need this for the next step)
+
+2. Copy the AWS CLI Credentials Into Our Local Machine
+>NOTE: You will copy all the content in `SHOW` into '~/.aws/credentials'.
+   - Use the following command:
+   ```
+   vim ~/.aws/credentials
+   ```
+   - Press `i` on the keyboard, and the bottom left of the terminal now says `INSERT`.
+   - Copy the entire credential shown in `Step 2`.
+   - When copied over, the format should look something like:
+        ```
+        [default]
+        aws_access_key_id=YOUR_ACCESS_KEY
+        aws_secret_access_key=YOUR_SECRET_KEY
+        aws_session_token=YOUR_SESSION_TOKEN
+        ```
+   - In addition to this file, add the default region:
+        ```
+        region=us-east-1 #use your preferred region
+        ```
+   - Then hit `Esc` and type `:` using `shift + ;`.
+   - Then type `wq` and hit `Enter`.
+3. Verify if the AWS credentials have been properly stored locally and are accessible by AWS CLI.
+   - Run the following command:
+     ```
+     aws sts get-caller-identity
+     ```
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
