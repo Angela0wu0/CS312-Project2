@@ -203,9 +203,9 @@ cd CS312-Project2
 ```
 - The port `25565` for `Minecraft` should no longer say open
 - Wait a couple of seconds or a minute, depending on your internet speed, for the EC2 Instance to fully reload, before rerunning:
-        ```bash
-        ./Testing/test-server.sh
-        ```
+```bash
+./Testing/test-server.sh
+```
 - Port `25565` for `Minecraft` should be `open` again.
 
 ## Part 5: Access the Minecraft Server
@@ -219,7 +219,7 @@ cd CS312-Project2
    - Then `Add Server`:
       - Server Name: `Minecraft Server`
       - Server Address: `<Public-IP>`
-       > **Note:** Replace `<Public-IP>` with the instance's Public IP. The IP can be found in /Scripts/config.env, re-running the `./Testing/test-server.sh` script, or in the AWS Management Console 
+       > **Note:** Replace `<Public-IP>` with the instance's Public IP. The IP can be found in `/Scripts/config.env`, re-running the `./Testing/test-server.sh` script, or in the AWS Management Console 
        
 ## Deleting the Minecraft Server
 # Sources
