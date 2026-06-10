@@ -52,18 +52,18 @@ graph LR
 
 ## Installing the Requirements
 Open your command line interface. On Windows is called Command Prompt, and Terminal for Linux users.
----
+
 ### [Installing Git winget Tool](https://git-scm.com/install/windows)
 - Run the following installation command:
 ```bash
 winget install --id Git.Git -e --source winget
 ```
----
+
 - Verify Git winget Tool is installed:
 ```bash
 git --version
 ```
-
+---
 ### [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (OPTIONAL For Ubuntu Users)
 - Run the following installation command:
 ```bash
@@ -74,7 +74,7 @@ wsl --install
 ```bash
 wsl --version
 ```
-
+---
 ### [Installing AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - For those using WSL, run the following command first:
 ```bash
@@ -99,6 +99,7 @@ aws --version
 
 `aws-cli/2.34.64 Python/3.14.5 Linux/6.18.33.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.24`
 
+---
 ### [Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - For those using WSL, run the following command first:
 ```bash
@@ -112,7 +113,7 @@ wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/sh
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install terraform
 ```
-
+---
 ### [Installing Nmap](https://medium.com/@orangsederhana/running-nmap-on-wsl-windows-10-f7716cdccfc7)
 - For those using WSL, run the following command first:
 ```bash
@@ -126,7 +127,7 @@ sudo apt update && sudo apt install nmap -y
 ```bash
 nmap --version
 ```
-
+---
 ## How to Run This Automation
 ### Step 1: Setting Up The AWS Credentials
 We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://www.awsacademy.com/vforcesite/LMS_Login)
@@ -162,6 +163,7 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
      ```bash
      aws sts get-caller-identity
      ```
+---
 ### Step 2: Cloning This Repository
 In your Command Line Interface, move to your desired folder location to clone this Repository
 
@@ -189,6 +191,7 @@ cd CS312-Project2
 ```
 >This script will run `bootstrap-ec2.sh` and `deployment.sh` script. `bootstrap-ec2.sh` will create the EC2 Instance through initializing Terraform in the `Terraform` folder. `deployment.sh` will then SSH into the created EC2 Instance and run a set of commands to set up and install the Minecraft Server. It will also create a `minecraft.service' to ensure auto-start upon boot, and will have been properly configured to close properly upon stop/shutdown. 
 
+---
 ### Step 4: Verify Successful Deployment
 - Run the script:
 ```bash
@@ -196,6 +199,7 @@ cd CS312-Project2
 ```
 - Nmap scan should show port `25565` open for `Minecraft`, followed by the version numbers and how many people are on the server.
 
+---
 ### Step 5: Verify Minecraft Auto-start on reboot
 - Run the script:
 ```bash
@@ -212,6 +216,7 @@ cd CS312-Project2
 ```
 - Port `25565` for `Minecraft` should be `open` again.
 
+---
 ## Step 6: Access the Minecraft Server
 1. Initial Setup 
    - Download [Minecraft](https://www.minecraft.net/en-us/download)
@@ -233,7 +238,14 @@ cd CS312-Project2
   ./Scripts/destroy_Terra.sh
   ```
 >
-  
+
+---
 # Sources
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 https://developer.hashicorp.com/terraform/language/style
+https://www.minecraft.net/en-us/download
+https://git-scm.com/install/windows
+https://learn.microsoft.com/en-us/windows/wsl/install
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+https://medium.com/@orangsederhana/running-nmap-on-wsl-windows-10-f7716cdccfc7
