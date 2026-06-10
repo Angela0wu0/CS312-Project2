@@ -1,7 +1,7 @@
 
 Key/*
 **/.terraform/*
-*.tfstate.*
+*.tfstate*
 *tfvars
 /aws/
 config.env

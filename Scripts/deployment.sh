@@ -8,7 +8,7 @@ chmod 400 Scripts/Key/mc-server-key
 
 ls -l Scripts/Key/mc-server-key
 
-ssh -i "Scripts/Key/mc-server-key" ${USER}@${PUBLIC_IP} << 'EOF'
+ssh -o StrictHostKeyChecking=accept-new -i "Scripts/Key/mc-server-key" ${USER}@${PUBLIC_IP} << 'EOF'
     echo "--Connected To Server--"
 
     sudo apt update -y
