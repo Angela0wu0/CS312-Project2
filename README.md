@@ -14,12 +14,12 @@ After cloning  accessing the folder  running the 'install.sh' bash script, it wi
 - Nmap
 
 
-### Installing the Requirements
-## Installing WSL
+## Installing the Requirements
+### Installing WSL
 `wsl --install`
 `wsl --version`
 
-## Installing AWS CLI
+### Installing AWS CLI
 
 In WSL:
 ```
@@ -27,9 +27,9 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 ```
-## Installing Terraform
+### Installing Terraform
 
-## Installing Nmap
+### Installing Nmap
 
 Diagram 
 
