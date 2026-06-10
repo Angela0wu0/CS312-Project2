@@ -235,8 +235,11 @@ cd CS312-Project2
 ```bash
 ./Testing/test-server.sh
 ```
-- Nmap scan should show port `25565` open for `Minecraft`, followed by the version numbers and how many people are on the server.
-
+- Nmap scan should show port `25565` open for `Minecraft`, followed by the version numbers and how many people are on the server:
+```
+PORT      STATE SERVICE   VERSION
+25565/tcp open  minecraft Minecraft 26.1.2 (Protocol: 127, Message: A Minecraft Server, Users: 0/20)   
+```
 ---
 ### Step 5: Verify Minecraft Auto-start on reboot
 - Run the script:
@@ -247,7 +250,11 @@ cd CS312-Project2
 ```bash
 ./Testing/test-server.sh
 ```
-- The port `25565` for `Minecraft` should no longer say open
+- The port `25565` for `Minecraft` should no longer say open:
+```
+PORT      STATE  SERVICE   VERSION
+25565/tcp closed minecraft   
+```
 - Wait a couple of seconds or a minute, depending on your internet speed, for the EC2 Instance to fully reload, before rerunning:
 ```bash
 ./Testing/test-server.sh
