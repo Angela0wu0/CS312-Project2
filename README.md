@@ -72,7 +72,7 @@ For those using WSL, run the following command first:
 
 Then run the following command:
 
-```
+```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
@@ -93,7 +93,10 @@ You should see something similar to:
 
 ## Connecting to the Minecraft Server
 ### Step 1: Cloning This Repository
+1. In your Command Line Interface, move to your desired folder location to clone this Repository. Use the `cd` command followed by the path to your folder location:
 
+`cd /path/to/folder`
 
-
+2. Once you have done use the `git clone` command:
+`git clone `
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
