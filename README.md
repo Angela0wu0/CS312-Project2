@@ -63,7 +63,7 @@ winget install --id Git.Git -e --source winget
 git --version
 ```
 
-### Installing WSL (OPTIONAL For Ubuntu Users)
+### [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (OPTIONAL For Ubuntu Users)
 - Run the following command:
 ```bash
 wsl --install
@@ -98,8 +98,22 @@ aws --version
 `aws-cli/2.34.64 Python/3.14.5 Linux/6.18.33.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.24`
 
 ### [Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- For those using WSL, run the following command first:
+```bash
+wsl
+```
+ - Run the following command:
+```bash
+wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+```
 
-### Installing Nmap
+### [Installing Nmap](https://medium.com/@orangsederhana/running-nmap-on-wsl-windows-10-f7716cdccfc7)
+- For those using WSL, run the following command first:
+```bash
+wsl
+```
 - Run the following command:
 ```bash
 sudo apt update && sudo apt install nmap -y
