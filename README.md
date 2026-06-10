@@ -250,14 +250,17 @@ cd CS312-Project2
 
 ---
 # Sources
-[Installing WSL]https://learn.microsoft.com/en-us/windows/wsl/install
-[Windows:Installing Git]https://git-scm.com/install/windows
-[Ubuntu:Installing Git]https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-[Installing AWS CLI]https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-[Installing Terraform]https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-[Installing Nmap]https://medium.com/@orangsederhana/running-nmap-on-wsl-windows-10-f7716cdccfc7
-[Minecraft Installation]https://www.minecraft.net/en-us/download
-[Terraform Code Formatting]https://developer.hashicorp.com/terraform/language/style
+[Installing WSL]https://learn.microsoft.com/en-us/windows/wsl/install  
+[Windows:Installing Git]https://git-scm.com/install/windows  
+[Ubuntu:Installing Git]https://git-scm.com/book/en/v2/Getting-Started-Installing-Git  
+[Installing AWS CLI]https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html  
+[Installing Terraform]https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli  
+[Installing Nmap]https://medium.com/@orangsederhana/running-nmap-on-wsl-windows-10-f7716cdccfc7  
+[Minecraft Installation]https://www.minecraft.net/en-us/download  
+[Terraform Code Formatting]https://developer.hashicorp.com/terraform/language/style  
+[Creating Keys With TerraForm]https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair
+[Running Terraform]https://developer.hashicorp.com/terraform/cli/commands
+
 
 
 
