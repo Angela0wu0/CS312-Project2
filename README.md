@@ -208,7 +208,7 @@ cd CS312-Project2
 ```
 - Port `25565` for `Minecraft` should be `open` again.
 
-## Part 5: Access the Minecraft Server
+## Step 6: Access the Minecraft Server
 1. Initial Setup 
    - Download [Minecraft](https://www.minecraft.net/en-us/download)
    - Open the Minecraft Launcher and Sign In
@@ -222,6 +222,14 @@ cd CS312-Project2
        > **Note:** Replace `<Public-IP>` with the instance's Public IP. The IP can be found in `/Scripts/config.env`, re-running the `./Testing/test-server.sh` script, or in the AWS Management Console 
        
 ## Deleting the Minecraft Server
+> [!IMPORTANT]
+> The script provided will ***Terminate*** the EC2 Instance. Please use this with caution! 
+- The deletion of the Minecraft Server Script:
+  ```bash
+  ./Scripts/destroy_Terra.sh
+  ```
+>
+  
 # Sources
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 https://developer.hashicorp.com/terraform/language/style
