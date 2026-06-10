@@ -60,11 +60,11 @@ Open your command line interface. On Windows is called Command Prompt, and Termi
  winget install --id Git.Git -e --source winget
  ```
 - For [Ubuntu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git):
- - Verify Git winget Tool is installed:
+ - Run the following installation command:
   ```bash
   sudo apt install git-all
   ```
--Verifying Installation:
+- Verifying Installation:
 ```bash
 git --version
 ```
