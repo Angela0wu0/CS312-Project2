@@ -19,6 +19,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
+# Setting up the EC2 UBUNTU 24.04 image Instance
 data "aws_ami" "ubuntu" {
   most_recent = true
   owners      = ["099720109477"]
@@ -34,6 +35,7 @@ data "aws_ami" "ubuntu" {
   }
 }
 
+# copy the IP and EC ID into the variables files to be used for .SH scripts
 resource "local_file" "variables" {
   filename = "../Scripts/config.env"
   content  = <<EOT

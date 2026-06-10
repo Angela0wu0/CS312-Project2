@@ -1,3 +1,4 @@
+# Create the EC2 Instance
 resource "aws_instance" "minecraft" {
   ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.ec2_type

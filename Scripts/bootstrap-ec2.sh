@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+# builiding the EC2 Instance with Terraform 
+
 echo "-------DEPLOYING TERRAFORM-------"
 
 echo "-------INTIALIZING-------"
