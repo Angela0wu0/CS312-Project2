@@ -53,16 +53,22 @@ graph LR
 ## Installing the Requirements
 Open your command line interface. On Windows is called Command Prompt, and Terminal for Linux users.
 
-### [Installing Git winget Tool](https://git-scm.com/install/windows)
-- Run the following installation command:
-```bash
-winget install --id Git.Git -e --source winget
-```
-
-- Verify Git winget Tool is installed:
+### Installing Git winget Tool
+- For [Windows](https://git-scm.com/install/windows):
+ - Run the following installation command:
+ ```bash
+ winget install --id Git.Git -e --source winget
+ ```
+- For [Ubuntu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git):
+ - Verify Git winget Tool is installed:
+  ```bash
+  sudo apt install git-all
+  ```
+-Verifying Installation:
 ```bash
 git --version
 ```
+
 ---
 ### [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (OPTIONAL For Ubuntu Users)
 - Run the following installation command:
@@ -142,7 +148,7 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
 2. Copy the AWS CLI Credentials Into Our Local Machine
    >NOTE: You will copy all the content in `SHOW` into '~/.aws/credentials'.
 
-    - Use the following command:
+   - Use the following command:
    ```bash
    vim ~/.aws/credentials
    ```
@@ -244,11 +250,16 @@ cd CS312-Project2
 
 ---
 # Sources
-https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-https://developer.hashicorp.com/terraform/language/style
-https://www.minecraft.net/en-us/download
-https://git-scm.com/install/windows
-https://learn.microsoft.com/en-us/windows/wsl/install
-https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
-https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-https://medium.com/@orangsederhana/running-nmap-on-wsl-windows-10-f7716cdccfc7
+[Installing WSL]https://learn.microsoft.com/en-us/windows/wsl/install
+[Windows:Installing Git]https://git-scm.com/install/windows
+[Ubuntu:Installing Git]https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[Installing AWS CLI]https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+[Installing Terraform]https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+[Installing Nmap]https://medium.com/@orangsederhana/running-nmap-on-wsl-windows-10-f7716cdccfc7
+[Minecraft Installation]https://www.minecraft.net/en-us/download
+[Terraform Code Formatting]https://developer.hashicorp.com/terraform/language/style
+
+
+
+
+
