@@ -44,7 +44,7 @@ graph LR
 ```
 
 ## Requirements
-- Git
+- Git winget Tool
 - Ubuntu Environment or WSL
 - AWS CLI
 - Terraform
@@ -53,13 +53,18 @@ graph LR
 ## Installing the Requirements
 Open your command line interface. On Windows is called Command Prompt, and Terminal for Linux users.
 
-### Installing Git
-
+[### Installing Git winget Tool](https://git-scm.com/install/windows)
+- Run the following command:
+```bash
+winget install --id Git.Git -e --source winget
+```
+- Verify Git winget Tool is installed:
+```bash
+git --version
+```
 
 ### Installing WSL (OPTIONAL For Ubuntu Users)
 - Run the following command:
-  
-bash
 ```bash
 wsl --install
 ```
