@@ -136,10 +136,13 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
    - Click 'Start Lab'.
    - Once the `red` dot turns `green`, click 'AWS Details'.
    - Next to 'AWS CLI:' click `SHOW` (Stay on this page, we will need this for the next step)
+     
+
 
 2. Copy the AWS CLI Credentials Into Our Local Machine
->NOTE: You will copy all the content in `SHOW` into '~/.aws/credentials'.
-   - Use the following command:
+   >NOTE: You will copy all the content in `SHOW` into '~/.aws/credentials'.
+
+    - Use the following command:
    ```bash
    vim ~/.aws/credentials
    ```
@@ -158,7 +161,7 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
         ```
    - Then hit `Esc` and type `:` using `shift + ;`.
    - Then type `wq` and hit `Enter`.
-3. Verify if the AWS credentials have been properly stored locally and are accessible by AWS CLI.
+4. Verify if the AWS credentials have been properly stored locally and are accessible by AWS CLI.
    - Run the command:
      ```bash
      aws sts get-caller-identity
