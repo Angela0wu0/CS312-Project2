@@ -53,7 +53,7 @@ graph LR
 ## Installing the Requirements
 Open your command line interface. On Windows is called Command Prompt, and Terminal for Linux users.
 
-[### Installing Git winget Tool](https://git-scm.com/install/windows)
+### [Installing Git winget Tool](https://git-scm.com/install/windows)
 - Run the following command:
 ```bash
 winget install --id Git.Git -e --source winget
