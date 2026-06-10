@@ -185,28 +185,42 @@ cd CS312-Project2
 ```
 >This script will run `bootstrap-ec2.sh` and `deployment.sh` script. `bootstrap-ec2.sh` will create the EC2 Instance through initializing Terraform in the `Terraform` folder. `deployment.sh` will then SSH into the created EC2 Instance and run a set of commands to set up and install the Minecraft Server. It will also create a `minecraft.service' to ensure auto-start upon boot, and will have been properly configured to close properly upon stop/shutdown. 
 
-- Verify Successful Deployment
-   - Run the script:
-     ```bash
-     ./Testing/test-server.sh
-     ```
-   - Nmap scan should show port `25565` open for `Minecraft`, followed by the version numbers and how many people are on the server.
-- Verify Minecraft Auto-start on reboot
-   - Run the script:
-    ```bash
-     ./Testing/test-re-mc.sh
-    ```
-   - Then run:
-      ```bash
-     ./Testing/test-server.sh
-     ```
-   - The port `25565` for `Minecraft` should no longer say open
-   - Wait a couple of seconds or a minute, depending on your internet speed, for the EC2 Instance to fully reload, before rerunning:
-     ```bash
-     ./Testing/test-server.sh
-     ```
-    - Port `25565` for `Minecraft` should be `open` again.
-  
+### Step 4: Verify Successful Deployment
+- Run the script:
+```bash
+./Testing/test-server.sh
+```
+- Nmap scan should show port `25565` open for `Minecraft`, followed by the version numbers and how many people are on the server.
+
+### Step 5: Verify Minecraft Auto-start on reboot
+- Run the script:
+```bash
+./Testing/test-re-mc.sh
+```
+- Then run:
+```bash
+./Testing/test-server.sh
+```
+- The port `25565` for `Minecraft` should no longer say open
+- Wait a couple of seconds or a minute, depending on your internet speed, for the EC2 Instance to fully reload, before rerunning:
+        ```bash
+        ./Testing/test-server.sh
+        ```
+- Port `25565` for `Minecraft` should be `open` again.
+
+## Part 5: Access the Minecraft Server
+1. Initial Setup 
+   - Download [Minecraft](https://www.minecraft.net/en-us/download)
+   - Open the Minecraft Launcher and Sign In
+   - Click on Minecraft Java Edition on the left-hand side of the Minecraft Launcher
+   - Click **Play**
+2. Connecting to the Server
+   - Click on `Multiplayer`
+   - Then `Add Server`:
+      - Server Name: `Minecraft Server`
+      - Server Address: `<Public-IP>`
+       > **Note:** Replace `<Public-IP>` with the instance's Public IP. The IP can be found in /Scripts/config.env, re-running the `./Testing/test-server.sh` script, or in the AWS Management Console 
+       
 ## Deleting the Minecraft Server
 # Sources
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
