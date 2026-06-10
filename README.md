@@ -206,7 +206,8 @@ cd CS312-Project2
      ./Testing/test-server.sh
      ```
     - Port `25565` for `Minecraft` should be `open` again.
-     
+  
+## Deleting the Minecraft Server
 # Sources
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 https://developer.hashicorp.com/terraform/language/style
