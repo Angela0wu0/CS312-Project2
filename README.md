@@ -92,6 +92,16 @@ sudo vim /etc/wsl.conf
    ```
    - Then hit `Esc` and type `:` using `shift + ;`.
    - Then type `wq` and hit `Enter`.
+- Now, `exit` out of WSL and restart WSL:
+```bash
+exit
+wsl --shutdown
+```
+- After shutting down access to WSl again:
+```
+wsl
+```
+
 Without this, the `chmod` command will not make the correct file permission settings. This is a problem as we need use the `.pem` private key with proper `400` or `600` file permissions to `ssh`.
 
 ---
