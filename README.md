@@ -226,7 +226,7 @@ cd CS312-Project2
 - Port `25565` for `Minecraft` should be `open` again.
 
 ---
-## Step 6: Access the Minecraft Server
+## Access the Minecraft Server
 1. Initial Setup 
    - Download [Minecraft](https://www.minecraft.net/en-us/download)
    - Open the Minecraft Launcher and Sign In
