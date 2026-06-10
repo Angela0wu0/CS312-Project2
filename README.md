@@ -59,16 +59,16 @@ Open your command line interface. On Windows is called Command Prompt, and Termi
 ### Installing WSL (OPTIONAL For Ubuntu Users)
 Run the following command:
 
-`wsl --install`
+```wsl --install```
 
 Verify the installation by running the following command:
 
-`wsl --version`
+```wsl --version```
 
 ### Installing AWS CLI
 For those using WSL, run the following command first:
 
-`wsl`
+```wsl```
 
 Then run the following command:
 
@@ -80,7 +80,7 @@ sudo ./aws/install
 
 Verify if AWS CLI is installed properly by running the following command:
 
-`aws --version`
+```aws --version```
 
 You should see something similar to:
 
@@ -95,19 +95,21 @@ You should see something similar to:
 ### Step 1: Cloning This Repository
 1. In your Command Line Interface, move to your desired folder location to clone this Repository. Use the `cd` command followed by the path to your folder location:
 
-`cd /path/to/folder`
+```cd /path/to/folder```
 
 2. Now use the `git clone` command:
 
-`git clone https://github.com/Angela0wu0/CS312-Project2.git`
+```git clone https://github.com/Angela0wu0/CS312-Project2.git```
 
 3. Access the cloned repository with:
 
-`cd CS312-Project2`
+```cd CS312-Project2```
 
 ### Step 2: AWS Credentials  
 We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://www.awsacademy.com/vforcesite/LMS_Login)
 1. Log in to your AWS Academy and access the AWS Academy Learner Lab
-2. Click `Start Lab'
-3. Once the red dot turns green, click 'AWS Details' 
+2. Click 'Start Lab'
+3. Once the `red` dot turns `green`, click 'AWS Details':
+   Next to 'AWS CLI:' click 'SHOW' 
+5. You will copy all the content in `SHOW` into your local machine by
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
