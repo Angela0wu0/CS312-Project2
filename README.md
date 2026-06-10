@@ -1,12 +1,20 @@
 # CS312-Project2
 ## Background
 ### Purpose
-The purpose of this GitHub Repo is to provide fully automated creation of a Minecraft Server (provisioning, configuration, and setup).
+The purpose of this project is to automate the creation of a Minecraft Java Edition Server (provisioning, configuration, and setup) on an AWS EC2 Instance.
 
 ### How It Works
-This automation will run the script to create an AWS EC2 Instance using Terraform 
+The deployment is an automated infrastructure pipeline that will: use Terraform to provision the AWS resources, and a BASH script to SSH into the created EC2 Instance to set up and install the Minecraft server 
 
-
+## Pipeline Diagram
+```mermaid
+graph LR
+    A[Your Machine/VM] --> B(Clone This Repo)
+    B --> C[AWS Academy CLI Credentials]
+    C --> D[Terraform Bootstrap Creates EC2 Instance]
+    D --> E[Deploying Minecraft Server Onto EC2 Instance]
+    E --> F[Verify Minecraft Server With Nmap]
+```
 ## Requirements
 - Ubuntu Environment or WSL
 - AWS CLI
@@ -50,8 +58,10 @@ You should see something similar to:
 
 ### Installing Nmap
 
-Diagram 
+
 
 Connecting to the Minecraft Server
+Step 1:
+
 
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
