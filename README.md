@@ -58,6 +58,8 @@ Open your command line interface. On Windows is called Command Prompt, and Termi
 
 ### Installing WSL (OPTIONAL For Ubuntu Users)
 - Run the following command:
+  
+bash
 ```bash
 wsl --install
 ```
