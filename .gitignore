@@ -1,0 +1,7 @@
+
+Key/*
+**/.terraform/*
+*.tfstate.*
+*tfvars
+/aws/
+config.env
