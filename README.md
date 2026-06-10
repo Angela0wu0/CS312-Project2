@@ -63,28 +63,29 @@ Run the following command:
 wsl --install
 ```
 
-Verify the installation by running the following command:
+Verify WSL is installed:
 
 ```bash
 wsl --version
 ```
 
-### Installing AWS CLI
+### [Installing AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 For those using WSL, run the following command first:
 
 ```bash
 wsl
 ```
 
-Then run the following command:
+Then run the command:
 
 ```bash
+sudo apt update && sudo apt install -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-Verify if AWS CLI is installed properly by running the following command:
+Verify AWS CLI is installed:
 
 ```bash
 aws --version
@@ -92,11 +93,18 @@ aws --version
 
 You should see something similar to:
 
-aws-cli/2.34.64 Python/3.14.5 Linux/6.18.33.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.24
+`aws-cli/2.34.64 Python/3.14.5 Linux/6.18.33.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.24`
 
-### Installing Terraform
+### [Installing Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
 ### Installing Nmap
+```bash
+sudo apt update && sudo apt install nmap -y
+```
+Verify Nmap is Installed:
+```bash
+nmap --version
+```
 
 ## How to Run This Automation
 ### Step 1: Setting Up The AWS Credentials
@@ -182,6 +190,6 @@ cd CS312-Project2
      ```
     - Port `25565` for `Minecraft` should be `open` again.
      
-### Step 4: Start the Automation
-
+# Sources
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+https://developer.hashicorp.com/terraform/language/style
