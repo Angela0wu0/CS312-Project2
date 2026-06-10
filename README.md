@@ -98,7 +98,6 @@ aws-cli/2.34.64 Python/3.14.5 Linux/6.18.33.1-microsoft-standard-WSL2 exe/x86_64
 
 ### Installing Nmap
 
-
 ## How to Run This Automation
 ### Step 1: Setting Up The AWS Credentials
 We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://www.awsacademy.com/vforcesite/LMS_Login)
@@ -135,25 +134,40 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
      aws sts get-caller-identity
      ```
 ### Step 2: Cloning This Repository
-1. In your Command Line Interface, move to your desired folder location to clone this Repository. Use the `cd` command followed by the path to your folder location:
+In your Command Line Interface, move to your desired folder location to clone this Repository
+
+- Use the `cd` command followed by the path to your folder location:
 
 ```bash
 cd /path/to/folder
 ```
 
-2. Now use the `git clone` command:
+-  Now use the `git clone` command:
 
 ```bash
 git clone https://github.com/Angela0wu0/CS312-Project2.git
 ```
 
-3. Access the cloned repository with:
+- Access the cloned repository with:
 
 ```bash
 cd CS312-Project2
 ```
-
-
 ### Step 3: Start the Automation
-1. In the `CS312-Project2
+- Start the Deployment Script:
+```bash
+./install.sh
+```
+This script will run `bootstrap-ec2.sh` and `deployment.sh` script. `bootstrap-ec2.sh` will create the EC2 Instance through initializing Terraform in the `Terraform` folder. `deployment.sh` will then SSH into the created EC2 Instance and run a set of commands to set up and install the Minecraft Server. It will also create a `minecraft.service' to ensure auto-start upon boot, and will have been properly configured to close properly upon stop/shutdown. 
+
+2. Verify Successful Deployment
+   - Run the script:
+     ./Testing/test-server.sh
+
+3. Verify Minecraft Auto-start on reboot
+   - Run the script:
+     ./Testing/test-re-mc.sh
+     
+### Step 4: Start the Automation
+
 https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
