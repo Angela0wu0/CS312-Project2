@@ -55,12 +55,12 @@ Open your command line interface. On Windows is called Command Prompt, and Termi
 
 ### Installing Git winget Tool
 - For [Windows](https://git-scm.com/install/windows):
-         - Run the following installation command:
+     - Run the following installation command:
  ```bash
  winget install --id Git.Git -e --source winget
  ```
 - For [Ubuntu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git):
-         - Run the following installation command:
+     - Run the following installation command:
   ```bash
   sudo apt install git-all
   ```
