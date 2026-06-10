@@ -54,7 +54,7 @@ graph LR
 Open your command line interface. On Windows is called Command Prompt, and Terminal for Linux users.
 
 ### [Installing Git winget Tool](https://git-scm.com/install/windows)
-- Run the following command:
+- Run the following installation command:
 ```bash
 winget install --id Git.Git -e --source winget
 ```
@@ -64,7 +64,7 @@ git --version
 ```
 
 ### [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (OPTIONAL For Ubuntu Users)
-- Run the following command:
+- Run the following installation command:
 ```bash
 wsl --install
 ```
@@ -79,6 +79,7 @@ wsl --version
 ```bash
 wsl
 ```
+We will be using AWS CLI commands in our Ubuntu interface, so it has to be installed in our WSL.
 
 - Then run the command:
 ```bash
@@ -102,6 +103,8 @@ aws --version
 ```bash
 wsl
 ```
+We will be using Terraform commands in our Ubuntu interface, so it has to be installed in our WSL.
+
  - Run the following command:
 ```bash
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
@@ -223,7 +226,7 @@ cd CS312-Project2
        
 ## Deleting the Minecraft Server
 > [!IMPORTANT]
-> The script provided will ***Terminate*** the EC2 Instance. Please use this with caution! 
+> The script provided will ***Terminate*** the EC2 Instance. This is non-reversible. Please use this with caution! 
 - The deletion of the Minecraft Server Script:
   ```bash
   ./Scripts/destroy_Terra.sh
