@@ -5,6 +5,7 @@ The purpose of this project is to automate the creation of a Minecraft Java Edit
 
 ### How It Works
 The deployment of the Minecraft Java Edition Server is an automated infrastructure pipeline that will: use Terraform to provision the AWS resources, and a BASH script to SSH into the created EC2 Instance and set up and install the Minecraft server. Upon successful completion, the server is verified using Nmap:
+
 `nmap -sV -Pn -p T:25565 <instance_public_ip>`
 
 ## Repository Structure
