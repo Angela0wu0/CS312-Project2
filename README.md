@@ -152,7 +152,7 @@ We will need the AWS Credentials found in the [AWS Academy Learner Lab](https://
 
    - Use the following command:
    ```bash
-   vim ~/.aws/credentials
+   sudo vim ~/.aws/credentials
    ```
    - Press `i` on the keyboard, and the bottom left of the terminal now says `INSERT`.
    - Copy the AWS CLI credentials that we found next to 'AWS CLI:'.
