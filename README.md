@@ -90,11 +90,12 @@ We will be using AWS CLI commands in our Ubuntu interface, so it has to be insta
 
 - Then run the command:
 ```bash
-sudo apt update && sudo apt install -y
+sudo apt update && sudo apt install unzip -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 ```
+This will update and install `unzip` so that we can later unzip the `AWSCLI` compressed folder. `curl` is then used to install the `AWSCLI` compressed folder, then unzipped with `unzip`. Finally, installing AWS locally on our machine.
 
 - Verify AWS CLI is installed:
 ```bash
